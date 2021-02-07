@@ -19,19 +19,19 @@ This is a simple MapReduce code for calculating average of newline separated int
 > `export HADOOP_CLASSPATH=$(/usr/bin/hadoop classpath)`   
 > `mkdir target`  
 > `cd target`  
-> `javac -classpath ${HADOOP_CLASSPATH} ../CustomAverageTuple.java`  
-> `jar cf findaverage-1.0-SNAPSHOT.jar *.class`  
+> `javac -classpath ${HADOOP_CLASSPATH} ../src/main/java/com/dulith/bda/FindAverage.java`  
+> `jar cf findaverage-1.0-SNAPSHOT.jar ../src/main/java/com/dulith/bda/*.class`  
 > `cd ../`
 
 5) you can create your own dataset using the `inputFileGen.py` script  
-> `cd input`  
+> `cd inputGen`  
 > `python inputFileGen.py`  
-> `cd ../`
 
 6) copy inputs files to HDFS
 > `hdfs dfs -mkdir average`  
 > `hdfs dfs -mkdir average/input`  
-> `hdfs dfs -put input/*.text average/input`  
+> `hdfs dfs -put input average/input`  
+> `cd ../`  
 
 7) Run MapReduce command.
 > `hadoop jar target/findaverage-1.0-SNAPSHOT.jar FindAverage /user/hadoop/average/input /user/hadoop/average/output`  

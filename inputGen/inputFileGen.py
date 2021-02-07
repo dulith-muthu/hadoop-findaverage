@@ -10,8 +10,10 @@ try:
 except ValueError:
     print("value error")
 
-directory = "./"
-files_in_directory = os.listdir("./")
+directory = "./input"
+if not os.path.exists(directory):
+    os.makedirs(directory)
+files_in_directory = os.listdir(directory)
 filtered_files = [file for file in files_in_directory if file.endswith(".txt")]
 for file in filtered_files:
 	path_to_file = os.path.join(directory, file)
@@ -19,7 +21,7 @@ for file in filtered_files:
 
 for i in range(number_of_files):
 
-    afile = open("input" + str(i) + ".txt", "w" )
+    afile = open("./input/input" + str(i) + ".txt", "w" )
 
     for j in range(numbers_per_file):
         line = str(random.randint(1, 100000))
