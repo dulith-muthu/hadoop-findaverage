@@ -10,7 +10,7 @@ This is a simple MapReduce code for calculating average of newline separated int
 1) Create EMR Cluster and ssh to master node  
 
 2) install git
-> `sduo yum install git-core`
+> `sudo yum install git-core`
 
 3) Clone this repository
 > `git clone https://github.com/dulith-muthu/hadoop-findaverage.git`
