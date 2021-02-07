@@ -15,16 +15,10 @@ This is a simple MapReduce code for calculating average of newline separated int
 3) Clone this repository
 > `git clone https://github.com/dulith-muthu/hadoop-findaverage.git`
 
-4) run `mvn clean install` or create jar as follows
-> `export HADOOP_CLASSPATH=$(/usr/bin/hadoop classpath)`   
-> `mkdir target`  
-> `cd target`  
-> `javac -classpath ${HADOOP_CLASSPATH} ../src/main/java/com/dulith/bda/FindAverage.java`  
-> `jar cf findaverage-1.0-SNAPSHOT.jar ../src/main/java/com/dulith/bda/*.class`  
-> `cd ../`
+4) [optional] run `mvn clean install` - jar file included in this repo 
 
 5) you can create your own dataset using the `inputFileGen.py` script  
-> `cd pyScripts`  
+> `cd hadoop-findaverage/pyScripts`  
 > `python inputFileGen.py`  
 
 6) copy inputs files to HDFS
