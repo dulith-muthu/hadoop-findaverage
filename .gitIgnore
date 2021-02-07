@@ -1,3 +1,7 @@
 #target
 pyScripts/input
 pyScripts/output
+.vscode
+.settings
+.project
+.classpath
