@@ -29,8 +29,7 @@ This is a simple MapReduce code for calculating average of newline separated int
 
 6) copy inputs files to HDFS
 > `hdfs dfs -mkdir average`  
-> `hdfs dfs -mkdir average/input`  
-> `hdfs dfs -put input average/input`  
+> `hdfs dfs -put input average`  
 > `cd ../`  
 
 7) Run MapReduce command.
