@@ -24,7 +24,7 @@ This is a simple MapReduce code for calculating average of newline separated int
 > `cd ../`
 
 5) you can create your own dataset using the `inputFileGen.py` script  
-> `cd inputGen`  
+> `cd pyScripts`  
 > `python inputFileGen.py`  
 
 6) copy inputs files to HDFS
@@ -33,9 +33,13 @@ This is a simple MapReduce code for calculating average of newline separated int
 > `cd ../`  
 
 7) Run MapReduce command.
-> `hadoop jar target/findaverage-1.0-SNAPSHOT.jar FindAverage /user/hadoop/average/input /user/hadoop/average/output`  
+> `hadoop jar target/findaverage-1.0-SNAPSHOT.jar /user/hadoop/average/input /user/hadoop/average/output`  
 
-8) Get the department-wise salary average output
-> `hdfs dfs -get output average/output`
+8) Get the (sum, count) output pairs from hdfs 
+> `hdfs dfs -get average/output pyScripts`
+
+9) get the average from the MapReduce output using the `outputAvgGen.py` script
+> `cd pyScripts`  
+> `python outputAvgGen.py`  
 
 

@@ -1,2 +1,3 @@
-target
-inputGen/input
+#target
+pyScripts/input
+pyScripts/output
