@@ -12,10 +12,10 @@ This is a simple MapReduce code for calculating average of newline separated int
 2) install git
 > `sduo yum install git-core`
 
-2) Clone this repository
+3) Clone this repository
 > `git clone https://github.com/dulith-muthu/hadoop-findaverage.git`
 
-3) run `mvn clean install` or create jar as follows
+4) run `mvn clean install` or create jar as follows
 > `export HADOOP_CLASSPATH=$(/usr/bin/hadoop classpath)`   
 > `mkdir target`  
 > `cd target`  
@@ -23,7 +23,7 @@ This is a simple MapReduce code for calculating average of newline separated int
 > `jar cf findaverage-1.0-SNAPSHOT.jar *.class`  
 > `cd ../`
 
-4) you can create your own dataset using the `inputFileGen.py` script  
+5) you can create your own dataset using the `inputFileGen.py` script  
 > `cd input`  
 > `python inputFileGen.py`  
 > `cd ../`
